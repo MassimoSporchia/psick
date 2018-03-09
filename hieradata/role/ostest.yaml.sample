@@ -12,6 +12,8 @@
 
 psick::profiles::linux_classes:
   ostest: psick::ostest
+  docker: psick::docker
+  docker_examples: psick::docker::run_examples
 
 network::interfaces_hash:
   eth0:
