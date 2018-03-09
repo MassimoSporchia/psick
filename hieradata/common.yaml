@@ -34,6 +34,7 @@ psick::pre::linux_classes:
   dns: psick::dns::resolver
   repo: psick::repo
   users: psick::users
+
 psick::base::linux_classes:
   mail: psick::postfix::tp
   ssh: psick::openssh

@@ -87,7 +87,6 @@ if defined('$facts') and defined('$trusted') {
   if $noop_mode == true {
     noop()
   }
-
   # We just do everything in psick module
   include '::psick'
 }

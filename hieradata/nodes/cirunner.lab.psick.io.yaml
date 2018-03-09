@@ -30,6 +30,11 @@ psick::gitlab::runner::runners:
     token: 'ZHyUq1GQfKFU9Tkk6iU9' # TO CHANGE AT EVERY GITLAB INSTALLATION
     tag_list: 'docker'
     tls_ca_file: '/etc/puppetlabs/puppet/ssl/certs/ca.pem'
+  alt_test_puppet:
+    url: 'https://git.lab.psick.io'
+    token: 'cEWZ2AWdLwCBv92BDCk8'
+    tag_list: 'test_puppet'
+    tls_ca_file: '/etc/puppetlabs/puppet/ssl/certs/ca.pem'
 
 # Integration tests via docker
 psick::docker::allowed_users:

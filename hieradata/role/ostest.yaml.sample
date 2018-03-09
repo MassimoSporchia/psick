@@ -11,9 +11,21 @@
 # Add profiles to the list below to test whole profiles
 
 psick::profiles::linux_classes:
-  - '::psick::ostest'
+  ostest: psick::ostest
 
-# For quicker tests we don't want to include all the
+network::interfaces_hash:
+  eth0:
+    enable_dhcp: true
+  eth1:
+    ipaddress: 10.42.45.106
+    netmask: 255.255.255.0  
+network::mroutes_hash:
+  eth1:
+    routes:
+      10.21.0.0/16: 10.42.45.106
+      10.22.0.0/16: 10.42.45.106
+      10.23.0.0/16: 10.42.45.106
+# For quicker tests we may not want to include all the
 # base psick classes which are by default added to 
-# all the roles.
-psick::base::manage: false
+# all the roles. This is done setting manage parameter to false:
+# psick::base::manage: false
